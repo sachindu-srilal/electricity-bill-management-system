@@ -19,6 +19,7 @@ const recordValidator: RequestHandler = (req, res, next) => {
 
 
 export const router = express.Router();
+
 router.post("/", recordValidator, async (req, res) => {
     const record = req.body as Record;
     if (!await findByAccount(record.account)) {
@@ -36,6 +37,7 @@ router.post("/", recordValidator, async (req, res) => {
 });
 
 router.get("/:account", async (req, res) => {
+    // should have minimum 3 readings
     const bool = await findByAccount(+req.params.account);
     if (bool) {
         const result = await displayDetails(+req.params.account);
@@ -43,6 +45,18 @@ router.get("/:account", async (req, res) => {
     } else {
         res.status(404).send("Invalid Account Number");
     }
-
 });
 
+
+// router.get('/', (req, res) => {
+//     const allCustomers = 'SELECT * FROM customer';
+  
+//     connection.query(allCustomers, (err, results) => {
+//       if (err) {
+//         console.error('Error fetching customer:', err);
+//         res.status(500).json({ error: 'Error fetching customer' });
+//       } else {
+//         res.json(results);
+//       }
+//     });
+// });

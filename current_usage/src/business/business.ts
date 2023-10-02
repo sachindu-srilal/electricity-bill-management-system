@@ -3,7 +3,7 @@ import {Record} from '../dto/record';
 import {Display} from "../dto/display";
 
 export async function saveRecord(entity: Record) {
-        await saveEntity(entity);
+    await saveEntity(entity);
 }
 
 export async function displayDetails(account: number) {
@@ -21,6 +21,7 @@ export async function displayDetails(account: number) {
     let thirdRangeBill: number;
     let fixedRate: number
     let totalBill: number
+
     if (points <= numberOfDays) {
         firstRangeBill = points * 20;
         secondRangeBill = 0;
