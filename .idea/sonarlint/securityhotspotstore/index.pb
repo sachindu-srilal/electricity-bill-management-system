@@ -1,0 +1,23 @@
+
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+c
+3ceb-app-frontend-react/src/css/CustomerBillData.css,1/1/114e5b3902d8340951713b535b7b6ac594492c1d
+c
+3ceb-app-frontend-react/src/Components/NavBarComp.js,e/a/ea8d1e4c24a9fd5dadd00c6d0fd0b183f0a0827c
+p
+@ceb-app-frontend-react/src/Components/CustomerFunctionalities.js,e/0/e0a954f9e2cc26631f2c47694755a8ddee9adf64
+^
+.ceb-app-frontend-react/src/Components/About.js,9/a/9a19005de6b17dfbdcffc8e788c4ca7943db3ce6
+h
+8ceb-app-frontend-react/src/Components/MeterReaderForm.js,f/7/f72286e4a2944edb3e114d35b12116ce38863fee
+S
+#ceb-app-frontend-react/package.json,6/f/6fda32f6a6c984d072efb925fbf9018eeb845c53
+<
+package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
+X
+(ceb-app-frontend-react/public/index.html,2/c/2c63b748f2ac6d9919edb5652f50b61a3ba751da
+Q
+!ceb-app-frontend-react/src/App.js,5/b/5b4845343714bb4d7e46a55a7e5e934d1a29de37
+S
+#ceb-app-frontend-react/src/index.js,2/c/2cd5c22e3c5660da15ac25ec28176dcdc2cca84d
