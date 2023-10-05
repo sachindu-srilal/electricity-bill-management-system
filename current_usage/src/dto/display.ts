@@ -1,9 +1,9 @@
 export class Display{
     constructor(
-    public beforePreviousDate:string,
+    public currentDate:string,
     public previousDate:string,
+    public currentMeterReading:number,
     public previousReading:number,
-    public beforePreviousReading:number,
     public fixedCharge:number,
     public firstBill:number,
     public secondBill:number,

@@ -32,31 +32,21 @@ router.post("/", recordValidator, async (req, res) => {
     }
 
     const result = await saveRecord(record);
+    console.log("success");
     res.sendStatus(201);
 
 });
 
 router.get("/:account", async (req, res) => {
-    // should have minimum 3 readings
     const bool = await findByAccount(+req.params.account);
+    const record = req.body as Record;
     if (bool) {
         const result = await displayDetails(+req.params.account);
         res.send(result);
-    } else {
+    }else if (!await findByAccount(record.account)) {
+        res.status(404).send("Invalid Account Number");
+        return;
+    }else {
         res.status(404).send("Invalid Account Number");
     }
 });
-
-
-// router.get('/', (req, res) => {
-//     const allCustomers = 'SELECT * FROM customer';
-  
-//     connection.query(allCustomers, (err, results) => {
-//       if (err) {
-//         console.error('Error fetching customer:', err);
-//         res.status(500).json({ error: 'Error fetching customer' });
-//       } else {
-//         res.json(results);
-//       }
-//     });
-// });

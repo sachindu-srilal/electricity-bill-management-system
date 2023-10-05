@@ -3,14 +3,15 @@ const dbConnection = require("../db/dbcp");
 const queries = require("./query");
 
 
-
 export async function saveEntity(entity:Record) {
     let con = await dbConnection();
     try {
         await con.query("START TRANSACTION");
         let savedTodo = await con.query(
             queries.insert_record,
-            [entity.account, entity.reading,entity.date]
+            [entity.account,
+            entity.reading,
+            entity.date]
         );
         await con.query("COMMIT");
     } catch (ex) {
@@ -76,6 +77,7 @@ export async function readEntities(account:number) {
         await con.destroy();
     }
 }
+
 export async function findByAccount(account:number) {
     let con = await dbConnection();
     try {
@@ -88,7 +90,6 @@ export async function findByAccount(account:number) {
         await con.release();
         await con.destroy();
     }
-
 };
 
 export async function findByDateAndAccount(account:number,date:Date) {
